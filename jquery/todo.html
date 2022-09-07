@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <div id="list"></div>
+        <input type="text" id="input">
+        <button id="submit">Sumbit</button>
+        <button id="deleteBtn">Delete</button>
+    </div>
+
+    <script language="JavaScript" type="text/javascript">
+        $(document).ready(function () {
+            let arrayList = [];
+
+            $('#submit').click(function () {
+                let newChild = document.createElement('li');
+                arrayList.push(newChild);
+                $('#list').append(arrayList[arrayList.length - 1]);
+                newChild.innerHTML = $('#input').val();
+            });
+
+            $('#deleteBtn').click(function () {
+                list.removeChild(arrayList[arrayList.length - 1]);
+                arrayList.pop();
+
+            });
+        });
+
+    </script>
+</body>
+
+</html>
