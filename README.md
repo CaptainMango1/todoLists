@@ -1,1 +1,1 @@
-## ToDo-Lists with diffrent webframeworks (and vanilla js)
+## ToDo-Lists with diffrent webframeworks, libaries etc. (and vanilla js)
