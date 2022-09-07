@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <div id="list"></div>
+        <input type="text" id="input">
+        <button id="submit">Sumbit</button>
+        <button id="deleteBtn">Delete</button>
+    </div>
+
+    <script>
+        let input = document.getElementById("input");
+        let list = document.getElementById("list");
+        let submit = document.getElementById("submit");
+        let deleteBtn = document.getElementById("deleteBtn");
+
+        let arrayList = [];
+
+        submit.addEventListener("click", () => {
+            let newChild = document.createElement("li");
+            arrayList.push(newChild);
+            list.appendChild(arrayList[arrayList.length - 1]);
+            newChild.innerHTML = input.value.text;
+
+        });
+
+        deleteBtn.addEventListener("click", () => {
+            list.removeChild(arrayList[arrayList.length - 1]);
+            arrayList.pop();
+
+        });
+    </script>
+</body>
+
+</html>
